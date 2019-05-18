@@ -18,17 +18,19 @@
       <h1 class="page-header">ABOUT ME</h1>
       <p class="mt-5">
         Hey, my name is Ringo.
-				<br><br>
-				I am {{ calculateAge(new Date('1998-12-12')) }} years old and a coder since over {{ calculateAge(new Date('2013-6-1')) }} years. My experience, 
-				I have collected over this time, mainly relates to front and back end as well as application and web development.
-				<br><br>
-				Currently, I am an apprentice at a software security and communication company in germany. Mainly, I am working with C# and .NET (Framework and Core), 
-				as well as with Go, Node.Js and Java as back end techniques.
-				<br><br>
-				I have much experiences working with JavaScript <i>(front end web development, nodejs, express, electron)</i>, Go <i>(back end API and Websocket development, mostly with gorilla webkit)</i> and C++ <i>(mostly application development with Qt/QML)</i>.
-				<br>
-				Also, I am practiced in working with database techniques like MySql, Cassandra,  Postgres and SQLite. Generally, I am working a lot with Linux servers (mostly Debian and some Ubuntu and Arch based distros), so I have also some practice in permission managing of Linux servers, working with container deployment (i.e. Docker) and typical development envoirements like CI or coverage testing.
-			
+			  <br><br>
+			  I am {{ calculateAge(new Date('1998-12-12')) }} years old and a passionate developer and coder since 2013. My collected experience mainly refer to back and front end as well as 
+			  application and web development.
+			  <br><br>
+			  Currently, I am an apprentice at a software security and communication company in germany. Primary, I am working with C# and .NET (Framework and Core), 
+			  as well as with Go, Node.Js and Java as back end techniques.
+			  <br><br>
+			  I have a lot of experiences working with JavaScript <i>(vue.js, react, nodejs, express, electron)</i>, Go <i>(back end API and web socket 
+				development, mostly with gorilla webkit or the fasthttp suite)</i> and C# <i>(mostly windows application development)</i>.
+			  <br>
+				Also, I am practiced in working with database techniques like MySql, Cassandra, Postgres, SQLite or MongoDB. Generally, I am working a lot with Linux servers 
+				(mostly Debian and some Ubuntu and Arch based distros), so I have also some practice in permission managing of Linux servers, working with container 
+        deployment (i.e. Docker) and typical development envoirements like CI or coverage testing.
       </p>
     </b-container>
   </div>
