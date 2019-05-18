@@ -1,0 +1,15 @@
+{
+    "esversion": 6,
+    "browser": true,
+    "jquery": true,
+
+    "eqeqeq": true,
+    "eqnull": true,
+    "expr": true,
+    "funcscope": true,
+    "maxcomplexity": true,
+    "maxdepth": true,
+    "shadow": true,
+
+    "-W097": false
+}
