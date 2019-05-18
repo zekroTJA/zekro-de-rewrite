@@ -7,9 +7,9 @@
       class="header-img mr-5 my-auto"
     />
     <button 
+      v-for="btn in btns" 
       class="header-btn" 
       :class="{ 'active': btn.active }"
-      v-for="btn in btns" 
       :key="btn.title"
       @click="btnClick(btn)"
     >
@@ -40,6 +40,12 @@ export default {
           title: 'PROJECTS',
           window_title: 'zekro Dev | PROJECTS',
           route: '/projects',
+          active: false,
+        },
+        {
+          title: 'GEAR',
+          window_title: 'zekro Dev | GEAR',
+          route: '/gear',
           active: false,
         },
         {
