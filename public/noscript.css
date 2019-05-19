@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200&display=swap');
+
+.ns-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    background-color: #263238;
+    padding: 20px 30px;
+    color: white;
+}
+
+.ns-container > div {
+    max-width: 1000px;
+    margin: 20vh auto;
+}
+
+.ns-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+.ns-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.social-banner {
+    margin-top: 50px;
+}
+
+.social-banner > a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.header > h1 {
+    position: relative;
+    margin: 0px 0px 30px 25px;
+}
