@@ -14,7 +14,7 @@
         </div>
       </b-container>
     </div>
-    <b-container id="about" class="content">
+    <b-container id="about" class="content mt-6">
       <h1 class="page-header">ABOUT ME</h1>
       <p class="mt-5">
         Hey, my name is Ringo. 👋
@@ -32,6 +32,14 @@
         (mostly Debian and some Ubuntu and Arch based distros), so I have also some practice in permission managing of Linux servers, working with container 
         deployment (i.e. Docker) and typical development envoirements like CI or coverage testing.
       </p>
+      <h1 class="page-header mt-6">YOUTUBE</h1>
+      <p class="text-center mt-4">
+        Here you can see the latest video on my <i>(german)</i>&nbsp;
+        <a href="https://youtube.com/zekrommaster110" target="_blank" class="text-white">YouTube channel</a>.
+      </p>
+      <div class="yt-iframe d-flex mt-5">
+			  <iframe title="My last Youtube videos" src="https://www.youtube-nocookie.com/embed?max-results=1&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;listType=user_uploads&amp;list=zekrommaster110" allowfullscreen></iframe>
+		  </div>
     </b-container>
     <Footer />
   </div>
@@ -65,6 +73,10 @@ export default {
 </script>
 
 <style scoped>
+  a {
+    text-decoration: underline;
+  }
+
   .main-header {
     width: 100%;
     height: 100vh;
@@ -107,8 +119,16 @@ export default {
     position: relative;
   }
 
-  .content {
+  .mt-6 {
     margin-top: 100px;
+  }
+
+  .yt-iframe > iframe {
+	  max-width: 100%;
+	  width: 900px;
+	  height: 510px;
+    border: 0;
+    margin: 0px auto;
   }
 
   @media screen and (max-height: 750px),
