@@ -55,6 +55,13 @@
           Here you can find the code of the web site on GitHub.
         </a>
       </div>
+      <div class="mt-3">
+        <p>
+          © 2019 Ringo Hoffmann (zekro Development)
+          <br />
+          Covered by MIT Licence.
+        </p>
+      </div>
     </div>
   </div>
 </template>
