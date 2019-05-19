@@ -57,6 +57,11 @@ export default {
     text-decoration: none;
   }
 
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+  }
+
   .router-cont {
     margin-bottom: 200px;
   }

@@ -1,0 +1,131 @@
+<template>
+  <div class="contact">
+    <h1 class="page-header mb-5">CONTACT</h1>
+    <b-container class="d-flex">
+      <div class="d-flex mx-auto">
+          <a v-for="sl in socialLinks" 
+            :key="sl.link"
+            :href="sl.link"
+            target="_blank"
+            class="mx-2 social-btn"
+          >
+            <img 
+              :src="sl.img" 
+              height="60"
+              width="60"
+            />
+          </a>
+      </div>
+    </b-container>
+    <b-container class="mt-5 tfont">
+      <table class="mx-auto">
+        <tr>
+          <td>Mail</td>
+          <td><a href="mailto:contact@zekro.de">contact[a]zekro.de</a></td>
+        </tr>
+        <tr>
+          <td>Discord</td>
+          <td><a href="https://discord.zekro.de">zekro#9131</a></td>
+        </tr>
+        <tr>
+          <td>Twitter (Private)</td>
+          <td><a href="https://twitter.com/zekroTJA">@zekroTJA</a></td>
+        </tr>
+        <tr>
+          <td>Twitter (Dev)</td>
+          <td><a href="https://twitter.com/zekroDev">@zekroDev</a></td>
+        </tr>
+      </table>
+    </b-container>
+    <div class="text-center" style="margin-top: 100px;">
+      <a class="imprint-btn" href="imprint.html">IMPRINT</a>
+    </div>
+  </div>
+</template>
+
+<script>
+import logoDiscord from '../assets/social/discord-128x128.png';
+import logoTwitter from '../assets/social/twitter-128x128.png';
+import logoYoutube from '../assets/social/youtube-128x128.png';
+import logoGithub from '../assets/social/github-128x128.png';
+
+export default {
+  name: 'Gear',
+
+  props: {
+    
+  },
+
+  data() {
+    return {
+      socialLinks: [
+        {
+          img: logoDiscord,
+          link: 'https://discord.zekro.de',
+        },
+        {
+          img: logoTwitter,
+          link: 'https://twitter.com/zekrotja',
+        },
+        {
+          img: logoYoutube,
+          link: 'https://youtube.com/zekrommaster110',
+        },
+        {
+          img: logoGithub,
+          link: 'https://github.com/zekroTJA',
+        }
+      ]
+    };
+  },
+}
+</script>
+
+<style scoped>
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  td {
+    padding-right: 20px;
+  }
+
+  .contact {
+    margin-top: 120px;
+  }
+
+  .social-btn {
+    transition: all .25s ease-in-out;
+  }
+
+  .social-btn:hover {
+    transform: scale(1.06);
+  }
+
+  .tfont {
+    font-size: 20px;
+  }
+
+  .imprint-btn {
+    background-color: var(--c-bg-sec);
+    padding: 15px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    border: 3px solid #546E7A;
+
+    transition: all .25s ease-in-out;
+  }
+
+  .imprint-btn:hover {
+    background-color: #039BE5;
+    border: 6px solid #4FC3F7;
+  }
+
+  @media screen and (max-width: 600px) {
+    .contact {
+      margin-top: 200px;
+    }
+  }
+</style>

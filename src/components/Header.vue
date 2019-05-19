@@ -49,8 +49,8 @@ export default {
           active: false,
         },
         {
-          title: 'CONTACT',
-          window_title: 'zekro Dev | CONTACT',
+          title: 'CONTACT & IMPRINT',
+          window_title: 'zekro Dev | CONTACT & IMPRINT',
           route: '/contact',
           active: false,
         },
