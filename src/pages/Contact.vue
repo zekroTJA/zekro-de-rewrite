@@ -49,8 +49,10 @@ import logoTwitter from '../assets/social/twitter-128x128.png';
 import logoYoutube from '../assets/social/youtube-128x128.png';
 import logoGithub from '../assets/social/github-128x128.png';
 
+import { RouterEventBus } from '../js/router-eventbus';
+
 export default {
-  name: 'Gear',
+  name: 'Contact',
 
   props: {
     
@@ -78,6 +80,10 @@ export default {
       ]
     };
   },
+
+  mounted() {
+    RouterEventBus.$emit('mounted', this.$options.name);
+  }
 }
 </script>
 

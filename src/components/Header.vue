@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { RouterEventBus } from '../js/router-eventbus'
 
 export default {
   name: 'Header',
@@ -31,24 +32,28 @@ export default {
     return {
       btns: [
         {
+          name: 'Main',
           title: 'HEY',
           window_title: 'zekro Dev | HEY',
           route: '/',
           active: true,
         },
         {
+          name: 'Projects',
           title: 'PROJECTS',
           window_title: 'zekro Dev | PROJECTS',
           route: '/projects',
           active: false,
         },
         {
+          name: 'Gear',
           title: 'GEAR',
           window_title: 'zekro Dev | GEAR',
           route: '/gear',
           active: false,
         },
         {
+          name: 'Contact',
           title: 'CONTACT & IMPRINT',
           window_title: 'zekro Dev | CONTACT & IMPRINT',
           route: '/contact',
@@ -67,12 +72,24 @@ export default {
 
   watch: {
     $route(to, from) {
-      var e = this.btns.find((e) => to.path === e.route);
-      if (e) e.active = true;
-      e = this.btns.find((e) => from.path === e.route);
-      if (e) e.active = false;
+      // var e = this.btns.find((e) => to.path === e.route);
+      // if (e) e.active = true;
+      // e = this.btns.find((e) => from.path === e.route);
+      // if (e) e.active = false;
     }
-  }
+  },
+
+  created() {
+    RouterEventBus.$on('mounted', (name) => {
+      this.btns.forEach((b) => {
+        if (b.name === name) {
+          b.active = true;
+        } else {
+          b.active = false;
+        }
+      });
+    });
+  },
 }
 </script>
 

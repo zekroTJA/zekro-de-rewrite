@@ -38,14 +38,15 @@
         <a href="https://youtube.com/zekrommaster110" target="_blank" class="text-white">YouTube channel</a>.
       </p>
       <div class="yt-iframe d-flex mt-5">
-			  <iframe title="My last Youtube videos" src="https://www.youtube-nocookie.com/embed?max-results=1&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;listType=user_uploads&amp;list=zekrommaster110" allowfullscreen></iframe>
-		  </div>
+        <iframe title="My last Youtube videos" src="https://www.youtube-nocookie.com/embed?max-results=1&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;listType=user_uploads&amp;list=zekrommaster110" allowfullscreen></iframe>
+      </div>
     </b-container>
     <Footer />
   </div>
 </template>
 
 <script>
+import { RouterEventBus } from '../js/router-eventbus';
 
 export default {
   name: 'Main',
@@ -68,6 +69,10 @@ export default {
       var ageDate = new Date(ageDifMs);
       return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
+  },
+
+  mounted() {
+    RouterEventBus.$emit('mounted', this.$options.name);
   },
 }
 </script>
@@ -124,9 +129,9 @@ export default {
   }
 
   .yt-iframe > iframe {
-	  max-width: 100%;
-	  width: 900px;
-	  height: 510px;
+    max-width: 100%;
+    width: 900px;
+    height: 510px;
     border: 0;
     margin: 0px auto;
   }

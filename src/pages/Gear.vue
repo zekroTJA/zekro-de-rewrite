@@ -23,6 +23,8 @@
 <script>
 import GearData from '../var/gear';
 
+import { RouterEventBus } from '../js/router-eventbus';
+
 export default {
   name: 'Gear',
 
@@ -32,6 +34,10 @@ export default {
 
   computed: {
     rows: GearData.rows,
+  },
+
+  mounted() {
+    RouterEventBus.$emit('mounted', this.$options.name);
   },
 }
 </script>

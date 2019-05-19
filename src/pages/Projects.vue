@@ -30,6 +30,8 @@
 import Project from '../components/Project';
 import ProjectsData from '../var/projects';
 
+import { RouterEventBus } from '../js/router-eventbus';
+
 export default {
   name: 'Projects',
 
@@ -43,7 +45,11 @@ export default {
 
   computed: {
     projects: ProjectsData.projects,
-  }
+  },
+
+  mounted() {
+    RouterEventBus.$emit('mounted', this.$options.name);
+  },
 }
 </script>
 
