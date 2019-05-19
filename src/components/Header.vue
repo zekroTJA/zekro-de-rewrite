@@ -71,12 +71,12 @@ export default {
   },
 
   watch: {
-    $route(to, from) {
-      // var e = this.btns.find((e) => to.path === e.route);
-      // if (e) e.active = true;
-      // e = this.btns.find((e) => from.path === e.route);
-      // if (e) e.active = false;
-    }
+    // $route(to, from) {
+    //   var e = this.btns.find((e) => to.path === e.route);
+    //   if (e) e.active = true;
+    //   e = this.btns.find((e) => from.path === e.route);
+    //   if (e) e.active = false;
+    // }
   },
 
   created() {

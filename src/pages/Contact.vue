@@ -40,6 +40,22 @@
     <div class="text-center" style="margin-top: 100px;">
       <a class="imprint-btn" href="imprint.html">IMPRINT</a>
     </div>
+    <div class="built-with-banner text-center">
+      <div class="hr"></div>
+      <h3 class="mt-5">This page is built with</h3>
+      <div class="mt-5 mx-auto">
+        <img class="mx-2" width="75" src="../assets/vue-logo-450x450.png" />
+        <img class="mx-2" width="75" src="../assets/js-logo-480x480.png" />
+        <img class="mx-2" width="75" src="../assets/html5-logo-512x512.png" />
+        <img class="mx-2" width="75" src="../assets/node-logo-266x266.png" />
+        <img class="mx-2" width="75" src="../assets/love-128x128.png" />
+      </div>
+      <div class="mt-5">
+        <a href="https://github.com/zekroTJA/zekro-de-rewrite" target="_blank">
+          Here you can find the code of the web site on GitHub.
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -127,6 +143,17 @@ export default {
   .imprint-btn:hover {
     background-color: #039BE5;
     border: 6px solid #4FC3F7;
+  }
+
+  .built-with-banner {
+    margin-top: 100px;
+  }
+
+  .built-with-banner > .hr {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 0px auto;
   }
 
   @media screen and (max-width: 600px) {
