@@ -16,7 +16,7 @@ export default {
         text:
           'A feature rich general purpose discord bot wich provides ' +
           'moderative and fun features for Disocord guilds.',
-        repo: 'https://github.com/zekroTJA/slms',
+        repo: 'https://github.com/zekroTJA/shinpuru',
         langs: ['GO'],
       },
       {
@@ -25,7 +25,7 @@ export default {
           'Fast and easy short link service with a dynamic web ' +
           'front end for managing and analysing and a stand-alone ' +
           'back end written in go.',
-        repo: 'https://github.com/zekroTJA/shinpuru',
+        repo: 'https://github.com/zekroTJA/slms',
         langs: ['GO', 'VUE', 'JS'],
       },
       {
