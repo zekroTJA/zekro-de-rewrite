@@ -137,7 +137,7 @@ export default {
   }
 
   @media screen and (max-height: 750px),
-         screen and (max-width: 600px) {
+         screen and (max-width: 690px) {
     .logo > img {
       width: 150px;
       height: 150px;

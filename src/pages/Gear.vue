@@ -56,11 +56,7 @@ export default {
     margin-top: 120px;
   }
 
-  @media screen and (max-width: 600px) {
-    .gear {
-      margin-top: 200px;
-    }
-
+  @media screen and (max-width: 690px) {
     .data-row {
       display: block !important;
     }

@@ -1,25 +1,65 @@
 <template>
-  <b-container fluid class="header d-flex">
-    <img 
-      src="../assets/logo-1000x1000.png"
-      width="40"
-      height="40"
-      class="header-img mr-5 my-auto"
-    />
-    <button 
-      v-for="btn in btns" 
-      class="header-btn" 
-      :class="{ 'active': btn.active }"
-      :key="btn.title"
-      @click="btnClick(btn)"
+  <div>
+    <!-- DESKTOP HEADER -->
+    <b-container fluid class="header d-flex">
+      <img 
+        src="../assets/logo-1000x1000.png"
+        width="40"
+        height="40"
+        class="header-img mr-5 my-auto"
+      />
+      <button 
+        v-for="btn in btns" 
+        class="header-btn" 
+        :class="{ 'active': btn.active }"
+        :key="btn.title"
+        @click="btnClick(btn)"
+      >
+        {{ btn.title }}
+      </button>
+    </b-container>
+
+    <!-- BURGER HEADER -->
+    <b-container fluid class="header header-burger d-none">
+      <img 
+        src="../assets/logo-1000x1000.png"
+        width="30"
+        height="30"
+        class="header-img mr-4 my-auto"
+      />
+      <BurgerButton 
+        @click="burgerBtnClick"
+        ref="burgerBtn"
+      />
+      <b-container fluid 
+        :class="burgerClasses"
+        class="burger-buttons"
+      >
+        <button 
+          v-for="btn in btns" 
+          class="header-btn burger-btn" 
+          :class="{ 'active': btn.active }"
+          :key="btn.title"
+          @click="btnClick(btn)"
+        >
+          {{ btn.title }}
+        </button>
+      </b-container>
+    </b-container>
+
+    <div 
+      class="burger-closer"
+      :class="{ 'd-none': !burgerActive }"
+      @click="burgerClose()"
     >
-      {{ btn.title }}
-    </button>
-  </b-container>
+    </div>
+  </div>
 </template>
 
 <script>
-import { RouterEventBus } from '../js/router-eventbus'
+import BurgerButton from '../components/BurgerButton';
+import { RouterEventBus } from '../js/router-eventbus';
+import { setTimeout } from 'timers';
 
 export default {
   name: 'Header',
@@ -28,8 +68,18 @@ export default {
     msg: String
   },
 
+  components: {
+    BurgerButton,
+  },
+
   data() {
     return {
+      burgerActive: false,
+      setBurgerActive: false,
+      burgerClasses: {
+        'burger-active': false,
+        'd-none' : true,
+      },
       btns: [
         {
           name: 'Main',
@@ -68,15 +118,25 @@ export default {
       this.$router.push(btn.route);
       window.document.title = btn.window_title;
     },
-  },
 
-  watch: {
-    // $route(to, from) {
-    //   var e = this.btns.find((e) => to.path === e.route);
-    //   if (e) e.active = true;
-    //   e = this.btns.find((e) => from.path === e.route);
-    //   if (e) e.active = false;
-    // }
+    burgerBtnClick(active) {
+      this.burgerActive = active;
+      if (active) {
+        this.burgerClasses['d-none'] = false;
+        setTimeout(() => {
+          this.burgerClasses['burger-active'] = true;
+        }, 25);
+      } else {
+        this.burgerClasses['burger-active'] = false;
+        setTimeout(() => {
+          this.burgerClasses['d-none'] = true;
+        }, 250);
+      }
+    },
+
+    burgerClose() {
+      this.$refs.burgerBtn.setActive(false);
+    },
   },
 
   created() {
@@ -107,7 +167,6 @@ export default {
     cursor: pointer;
     color: white;
     border-style: none;
-    margin: 0;
     margin: auto 0;
     padding: 24px 24px;
     font-size: 18px;
@@ -124,13 +183,42 @@ export default {
     background-color: rgba(0, 0, 0, 0.25);
   }
 
-  @media screen and (max-width: 600px) {
+  .burger-btn {
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+  }
+
+  .burger-buttons {
+    position: relative;
+    top: -50px;
+    opacity: 0;
+
+    transition: all .25s ease-in-out;
+  }
+
+  .burger-active {
+    top: 0px;
+    opacity: 1;
+  }
+
+  .burger-closer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+
+  @media screen and (max-width: 690px) {
     .header {
-      display: block !important;
-      padding: 0;
+      display: none !important;
     }
 
-    .header-btn {
+    .header-burger {
+      display: block !important;
+    }
+
+    /* .header-btn {
       width: 100%;
       margin: 0;
       padding: 5px 0px;
@@ -138,6 +226,6 @@ export default {
 
     .header-img {
       display: none;
-    }
+    } */
   }
 </style>

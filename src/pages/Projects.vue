@@ -84,9 +84,6 @@ export default {
     transform: scale(1.05);
   }
 
-  @media screen and (max-width: 600px) {
-    .projects {
-      margin-top: 200px;
-    }
+  @media screen and (max-width: 690px) {
   }
 </style>

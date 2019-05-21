@@ -163,9 +163,7 @@ export default {
     margin: 0px auto;
   }
 
-  @media screen and (max-width: 600px) {
-    .contact {
-      margin-top: 200px;
-    }
+  @media screen and (max-width: 690px) {
+    
   }
 </style>
