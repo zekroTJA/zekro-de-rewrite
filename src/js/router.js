@@ -5,6 +5,7 @@ import Main from '../pages/Main';
 import Projects from '../pages/Projects';
 import Gear from '../pages/Gear';
 import Contact from '../pages/Contact';
+import Guild from '../pages/Guild';
 
 export default new Router({
   mode: 'history',
@@ -24,6 +25,11 @@ export default new Router({
       path: '/gear',
       name: 'Gear',
       component: Gear,
+    },
+    {
+      path: '/guild',
+      name: 'Guild',
+      component: Guild,
     },
     {
       path: '/contact',

@@ -103,6 +103,13 @@ export default {
           active: false,
         },
         {
+          name: 'Guild',
+          title: 'DEV GUILD',
+          window_title: 'zekro Dev | DEV GUILD',
+          route: '/guild',
+          active: false,
+        },
+        {
           name: 'Contact',
           title: 'CONTACT & IMPRINT',
           window_title: 'zekro Dev | CONTACT & IMPRINT',

@@ -13,7 +13,7 @@
 import { RouterEventBus } from '../js/router-eventbus'
 
 export default {
-  name: 'Header',
+  name: 'BurgerButton',
 
   props: {
     msg: String

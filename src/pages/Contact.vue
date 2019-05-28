@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <td>Discord</td>
-          <td><a href="https://discord.zekro.de">zekro#9131</a></td>
+          <td><a href="https://discord.zekro.de">zekro#0001</a></td>
         </tr>
         <tr>
           <td>Twitter (Private)</td>
