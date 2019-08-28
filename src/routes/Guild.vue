@@ -3,7 +3,7 @@
     <div class="container text-center">
       <h1>ZEKRO'S DEV-SCHUPPEN</h1>
       <p class="my-5">
-        Hey! We are a friendly and open community of <i>(mostyl german)</i> young developers open for
+        Hey! We are a friendly and open community of <i>(mostly german)</i> young developers open for
         your ideas, projects and questions to share information and skills and having a nice time!
       </p>
       <DiscordInfo 
