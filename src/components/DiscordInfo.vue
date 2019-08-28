@@ -71,6 +71,11 @@ export default {
     transition: all .2s ease-in-out;
   }
 
+  .dc-cont:hover .join-txt {
+    height: 35px;
+    padding: 6px;
+  }
+
   .data-cont {
     margin-bottom: 30px;
   }
@@ -116,6 +121,8 @@ export default {
     background-color: #7289DA;
     padding: 3px;
     border-radius: 0px 0px 5px 5px;
+
+    transition: all .2s ease-in-out;
   }
 
 </style>

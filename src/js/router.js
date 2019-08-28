@@ -1,11 +1,11 @@
 /** @format */
 
 import Router from 'vue-router';
-import Main from '../pages/Main';
-import Projects from '../pages/Projects';
-import Gear from '../pages/Gear';
-import Contact from '../pages/Contact';
-import Guild from '../pages/Guild';
+import Main from '../routes/Main';
+import Projects from '../routes/Projects';
+import Gear from '../routes/Gear';
+import Contact from '../routes/Contact';
+import Guild from '../routes/Guild';
 
 export default new Router({
   mode: 'history',

@@ -2,7 +2,8 @@
   <div class="projects">
     <h1 class="page-header">PROJECTS</h1>
     <b-container class="projects-container">
-      <Project v-for="p in projects" 
+      <Project
+        v-for="p in projects"
         :key="p.title"
         :title="p.title"
         :text="p.text"
@@ -14,8 +15,7 @@
     <b-container>
       <p class="mt-5 text-center">
         Of course, these are not all my projects.
-        <br/>
-        Take a look at my GitHub profile, where I host the code of the most of my projects.
+        <br />Take a look at my GitHub profile, where I host the code of the most of my projects.
       </p>
       <div class="mt-4 d-flex">
         <a class="mx-auto gh-link" href="https://github.com/zekroTJA" target="_blank">
@@ -27,8 +27,9 @@
 </template>
 
 <script>
+/** @format */
+
 import Project from '../components/Project';
-import ProjectsData from '../var/projects';
 
 import { RouterEventBus } from '../js/router-eventbus';
 
@@ -40,50 +41,66 @@ export default {
   },
 
   props: {
-    msg: String
+    msg: String,
   },
 
-  computed: {
-    projects: ProjectsData.projects,
+  data() {
+    return {
+      projects: [],
+    };
   },
 
   mounted() {
     RouterEventBus.$emit('mounted', this.$options.name);
   },
-}
+
+  created() {
+    this.fetchData();
+  },
+
+  methods: {
+    fetchData() {
+      this.$http.get('https://api.zekro.de/webpage/projects').then((res) => {
+        this.projects = res.body ? res.body.data : [];
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
-  p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-  }
+/** @format */
 
-  .projects {
-    margin-top: 120px;
-  }
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
 
-  .page-header {
-    margin-bottom: 50px;
-  }
+.projects {
+  margin-top: 120px;
+}
 
-  .projects-container {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-  }
+.page-header {
+  margin-bottom: 50px;
+}
 
-  .gh-link {
-    opacity: .9;
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
 
-    transition: all .25s ease-in-out;
-  }
+.gh-link {
+  opacity: 0.9;
 
-  .gh-link:hover {
-    opacity: 1;
-    transform: scale(1.05);
-  }
+  transition: all 0.25s ease-in-out;
+}
 
-  @media screen and (max-width: 690px) {
-  }
+.gh-link:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 690px) {
+}
 </style>
