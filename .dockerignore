@@ -1,0 +1,7 @@
+.git/
+.gitignore
+.prettierrc.yml
+*.md
+vendor/
+**/node_modules/
+**/dist/
