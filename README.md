@@ -6,5 +6,5 @@ Feel free to leave some feedback or commit a pull request. 😉
 
 ---
 
-© 2019 Ringo Hoffmann (zekro Development)  
+© 2018-2019 Ringo Hoffmann (zekro Development)  
 Covered by MIT Licence.
