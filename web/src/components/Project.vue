@@ -44,6 +44,7 @@ export default {
 .project {
   position: relative;
   max-width: 400px;
+  min-width: 400px;
   height: 200px;
   background-color: var(--c-bg-sec);
   border-radius: 10px;
@@ -51,6 +52,12 @@ export default {
   margin-bottom: 25px;
 
   transition: all 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 420px) {
+  .project {
+    min-width: 0;
+  }
 }
 
 .project > h1 {
