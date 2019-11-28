@@ -1,11 +1,7 @@
 <template>
   <a :href="href" class="dc-cont d-flex">
     <div class="d-flex mx-auto data-cont">
-      <img 
-        class="avatar mr-4"
-        :src="rdata.icon_url.replace('.jpg', '.gif')" 
-        width="100" height="100" 
-      />
+      <img class="avatar mr-4" :src="rdata.icon_url" width="100" height="100" />
       <div>
         <h2>{{ rdata.name }}</h2>
         <div class="d-flex">
@@ -25,12 +21,14 @@
 </template>
 
 <script>
+/** @format */
+
 export default {
   name: 'DiscordInfo',
 
   props: {
     guildid: String,
-    href: String
+    href: String,
   },
 
   data() {
@@ -40,89 +38,93 @@ export default {
         name: '',
         members_total: 0,
         members_online: 0,
-      }
+      },
     };
   },
 
   methods: {
     fetchData() {
-      this.$http.get(`https://zekro.de:9988/api/guildinfo/${this.guildid}`)
+      this.$http
+        .get(`https://zekro.de:9988/api/guildinfo/${this.guildid}`)
         .then((res) => {
           this.rdata = res.body;
-        }).catch(console.error);
+          console.log(res.body);
+        })
+        .catch(console.error);
     },
   },
 
   created() {
     this.fetchData();
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
-  .dc-cont {
-    position: relative;
-    background-color: #2C2F33;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.24);
-    cursor: pointer;
+/** @format */
 
-    transition: all .2s ease-in-out;
-  }
+.dc-cont {
+  position: relative;
+  background-color: #2c2f33;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
 
-  .dc-cont:hover .join-txt {
-    height: 35px;
-    padding: 6px;
-  }
+  transition: all 0.2s ease-in-out;
+}
 
-  .data-cont {
-    margin-bottom: 30px;
-  }
+.dc-cont:hover .join-txt {
+  height: 35px;
+  padding: 6px;
+}
 
-  .dc-cont:hover {
-    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.24);
-    transform: scale(1.02);
-  }
+.data-cont {
+  margin-bottom: 30px;
+}
 
-  img.avatar {
-    border-radius: 50%;
-  }
+.dc-cont:hover {
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.24);
+  transform: scale(1.02);
+}
 
-  .pill {
-    display: flex;
-    align-items: center;
-    background-color: rgb(33, 35, 37);
-    padding: 5px 12px;
-    border-radius: 1000px;
-    margin: 10px 0px;
-  }
+img.avatar {
+  border-radius: 50%;
+}
 
-  .pill-dot {
-    width: 1rem;
-    height: 1rem;
-    background-color: #72767d;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+.pill {
+  display: flex;
+  align-items: center;
+  background-color: rgb(33, 35, 37);
+  padding: 5px 12px;
+  border-radius: 1000px;
+  margin: 10px 0px;
+}
 
-  .online {
-    background-color: #43b581;
-  }
+.pill-dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: #72767d;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 
-  .join-txt {
-    position: absolute;
-    align-items: center;
-    text-align: center;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 30px;
-    background-color: #7289DA;
-    padding: 3px;
-    border-radius: 0px 0px 5px 5px;
+.online {
+  background-color: #43b581;
+}
 
-    transition: all .2s ease-in-out;
-  }
+.join-txt {
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  background-color: #7289da;
+  padding: 3px;
+  border-radius: 0px 0px 5px 5px;
 
+  transition: all 0.2s ease-in-out;
+}
 </style>
