@@ -16,5 +16,5 @@ WORKDIR /app
 COPY --from=build /build/bin .
 
 EXPOSE 8080
-ENTRYPOINT ['/app/server']
-CMD -dir /app/dist -addr :8080
+ENTRYPOINT ["/app/server"]
+CMD ["-dir", "/app/dist", "-addr", ":8080"]
