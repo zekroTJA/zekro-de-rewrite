@@ -14,5 +14,7 @@ RUN cd ./web &&\
 FROM debian:stretch-slim AS final
 WORKDIR /app
 COPY --from=build /build/bin .
+
 EXPOSE 8080
-CMD /app/server -dir /app/dist -addr :8080
+ENTRYPOINT ['/app/server']
+CMD -dir /app/dist -addr :8080
