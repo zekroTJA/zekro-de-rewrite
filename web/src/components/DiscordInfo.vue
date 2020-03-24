@@ -45,7 +45,7 @@ export default {
   methods: {
     fetchData() {
       this.$http
-        .get(`https://zekro.de:9988/api/guildinfo/${this.guildid}`)
+        .get(`https://api.zekro.de/guildinfo/guild/${this.guildid}`)
         .then((res) => {
           this.rdata = res.body;
           console.log(res.body);
