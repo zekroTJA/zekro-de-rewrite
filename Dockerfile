@@ -21,7 +21,8 @@ FROM golang:1.14-alpine AS build-stk
 
 WORKDIR /build
 
-RUN git clone https://github.com/zekroTJA/seiteki --depth 1
+RUN apk add git
+RUN git clone https://github.com/zekroTJA/seiteki . --depth 1
 RUN go build -o seiteki cmd/seiteki/main.go
 
 # -----------------------------------------------------------------
