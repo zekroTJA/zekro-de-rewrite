@@ -1,21 +1,41 @@
-FROM golang:1.13 AS build
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - &&\
-        apt-get install -y nodejs tree
+# -----------------------------------------------------------------
+# -- BUILD WEB APPLICATION
+# -----------------------------------------------------------------
+FROM node:13-alpine AS build-web
 
 WORKDIR /build
-ADD . .
 
-RUN go mod tidy
-RUN go build -o ./bin/server ./cmd/server/*.go
-RUN cd ./web &&\
-    npm ci &&\
-    npm run build &&\
-    cp -r ./dist ../bin
+COPY public/ public/
+COPY src/ src/
+COPY package.json .
+COPY package-lock.json .
+COPY vue.config.js .
 
-FROM debian:stretch-slim AS final
+RUN npm ci
+RUN npm run build
+
+# -----------------------------------------------------------------
+# -- BUILD SEITEKI
+# -----------------------------------------------------------------
+FROM golang:1.14-alpine AS build-stk
+
+WORKDIR /build
+
+RUN git clone https://github.com/zekroTJA/seiteki --depth 1
+RUN go build -o seiteki cmd/seiteki/main.go
+
+# -----------------------------------------------------------------
+# -- BUILD FINAL IMAGE
+# -----------------------------------------------------------------
+FROM alpine:latest AS final
+LABEL maintainer="zekro <contact@zekro.de>"
+
 WORKDIR /app
-COPY --from=build /build/bin .
 
-EXPOSE 8080
-ENTRYPOINT ["/app/server"]
-CMD ["-dir", "/app/dist", "-addr", ":8080"]
+COPY --from=build-web /build/dist/ .
+COPY --from=build-stk /build/seiteki /bin/seiteki
+
+RUN chmod +x /bin/seiteki
+
+ENTRYPOINT ["/bin/seiteki", "-dir", "/app"]
+CMD ["-addr", ":80"]
