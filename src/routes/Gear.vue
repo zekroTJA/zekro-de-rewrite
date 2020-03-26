@@ -57,7 +57,6 @@ export default {
 /** @format */
 
 a {
-  color: white;
   font-size: 18px;
 }
 

@@ -8,6 +8,8 @@
 </template>
 
 <script>
+/** @format */
+
 import './css/consts.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -17,62 +19,68 @@ import Router from './js/router';
 
 export default {
   name: 'app',
-  
+
   router: Router,
-  
+
   components: {
     Header,
   },
-}
+};
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap');
+/** @format */
 
-  html {
-    scroll-behavior: smooth;
-  }
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap');
 
-  body {
-    background-color: var(--c-bg-main);
-    font-family: 'Roboto', sans-serif;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  div {
-    color: white;
-  }
+body {
+  background-color: var(--c-bg-main);
+  font-family: 'Roboto', sans-serif;
+}
 
-  button {
-    background-color: transparent;
-    border-style: none;
-  }
+div {
+  color: white;
+}
 
-  button:focus {
-    outline : 0;
-    -moz-outline : 0;
-  }
+button {
+  background-color: transparent;
+  border-style: none;
+}
 
-  a, a:hover {
-    text-decoration: none;
-  }
+button:focus {
+  outline: 0;
+  -moz-outline: 0;
+}
 
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-  }
+a,
+a:hover {
+  text-decoration: none;
+  color: var(--c-highlight);
+}
 
-  .router-cont {
-    margin-bottom: 200px;
-  }
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
 
-  .font-montserrat {
-    font-family: 'Montserrat', sans-serif;
-  }
+.router-cont {
+  margin-bottom: 200px;
+}
 
-  .page-header {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-  }
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-header {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
 </style>

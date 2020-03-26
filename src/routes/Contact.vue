@@ -120,7 +120,6 @@ export default {
 /** @format */
 
 a {
-  color: white;
   text-decoration: underline;
 }
 
@@ -150,14 +149,15 @@ td {
   font-family: 'Montserrat', sans-serif;
   font-size: 25px;
   text-decoration: none;
-  border: 3px solid #546e7a;
+  border: 3px solid var(--c-highlight);
+  color: white;
 
   transition: all 0.25s ease-in-out;
 }
 
 .imprint-btn:hover {
-  background-color: #039be5;
-  border: 6px solid #4fc3f7;
+  background-color: var(--c-highlight);
+  border: 6px solid #a30834;
 }
 
 .built-with-banner {

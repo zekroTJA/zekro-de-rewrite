@@ -6,7 +6,7 @@
           <img width="300" height="300" src="../assets/logo-1000x1000.png" />
           <h1 class="font-montserrat mt-3 mb-0">zekro</h1>
           <h2 class="font-montserrat">DEVELOPMENT</h2>
-          <button class="down" @click="scrollTo('#about')">
+          <button class="down" @click="scrollTo('#scroll-about')">
             <p>READ MORE</p>
             <div style="top: -20px;">
               <img width="80" src="../assets/down-vec.svg" />
@@ -18,6 +18,7 @@
         </div>
       </b-container>
     </div>
+    <a id="scroll-about"></a>
     <b-container id="about" class="content mt-6">
       <h1 class="page-header">ABOUT ME</h1>
       <p class="mt-5">
@@ -45,11 +46,7 @@
       <p class="text-center mt-4">
         Here you can see the latest video on my
         <i>(german)</i>&nbsp;
-        <a
-          href="https://youtube.com/zekrommaster110"
-          target="_blank"
-          class="text-white"
-        >YouTube channel</a>.
+        <a href="https://youtube.com/zekrommaster110" target="_blank">YouTube channel</a>.
       </p>
       <div class="yt-iframe d-flex mt-5">
         <iframe
@@ -106,7 +103,7 @@ a {
 .main-header {
   width: 100%;
   height: 100vh;
-  background-image: url('../assets/main-bg-1632x865.png');
+  background-image: url('../assets/main-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-repeat: no-repeat;
