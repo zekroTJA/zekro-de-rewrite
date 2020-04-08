@@ -118,5 +118,9 @@ export default {
 .lang-angular {
   background-color: #dd0031 !important;
 }
+
+.lang-react {
+  background-color: #61dafb !important;
+}
 /* ------------------ */
 </style>

@@ -49,12 +49,13 @@
       <div class="hr"></div>
       <h3 class="mt-5">This page is built with</h3>
       <div class="mt-5 mx-auto">
-        <img class="mx-3" height="75" src="../assets/vue-logo-450x450.png" />
-        <img class="mx-3" height="75" src="../assets/js-logo-480x480.png" />
-        <img class="mx-3" height="75" src="../assets/html5-logo-512x512.png" />
-        <img class="mx-3" height="75" src="../assets/node-logo-266x266.png" />
-        <img class="mx-3" height="75" src="../assets/docker-logo-1316x1126.png" />
-        <img class="mx-3" height="75" src="../assets/love-128x128.png" />
+        <img class="mx-3" height="45" src="../assets/vue-logo-450x450.png" />
+        <img class="mx-3" height="45" src="../assets/js-logo-480x480.png" />
+        <img class="mx-3" height="45" src="../assets/html5-logo-512x512.png" />
+        <img class="mx-3" height="45" src="../assets/node-logo-266x266.png" />
+        <img class="mx-3" height="45" src="../assets/docker-logo-1316x1126.png" />
+        <img class="mx-3" height="45" src="../assets/golang-logo-1280x481.png" />
+        <img class="mx-3" height="45" src="../assets/love-128x128.png" />
       </div>
       <div class="mt-5">
         <a
@@ -64,7 +65,7 @@
       </div>
       <div class="mt-3">
         <p>
-          © 2019 Ringo Hoffmann (zekro Development)
+          © 2020 Ringo Hoffmann (zekro Development)
           <br />Covered by MIT Licence.
         </p>
       </div>

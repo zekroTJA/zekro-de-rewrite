@@ -25,22 +25,25 @@
         Hey, my name is Ringo. 👋
         <br />
         <br />
-        I am {{ calculateAge(new Date('1998-12-12')) }} years old and a passionate developer and coder since 2013. My collected experience mainly refers to back and front end as well as
-        application and web development.
+        I am {{ calculateAge(new Date('1998-12-12')) }} years old and a passionate developer and coder since around 2013. Back then,
+        I've started creating small tools using .NET (C#) and Windowns Forms. Also I've created some Modifications for the Game
+        Minecraft and some Bots connecting to the Discord API dive deep into Java and general object oriented programming.
         <br />
-        <br />Currently, I am an apprentice at a software security and communication company in germany. Primary, I am working with C# and .NET (Framework and Core),
-        as well as with Go, Node.Js and Java as back end techniques.
+        <br />Currently, I am an apprentice at a software security and communication company in germany. Primarily, I am currently working with C#, .NET and ASP.NET (Framework and Core),
+        as well as with Angular.
         <br />
-        <br />I have a lot of experiences working with JavaScript
-        <i>(vue.js, react, nodejs, express, electron)</i>, Go
-        <i>
-          (back end API and web socket
-          development, mostly with gorilla webkit or the fasthttp suite)
-        </i> and C#
-        <i>(mostly windows application development)</i>.
-        <br />Also, I am practiced in working with database techniques like MySql, Cassandra, Postgres, SQLite or MongoDB. Generally, I am working a lot with Linux servers
-        (mostly Debian and some Ubuntu and Arch based distros), so I have also some practice in permission managing of Linux servers, working with container
-        deployment (i.e. Docker) and typical development envoirements like CI or coverage testing.
+        <br />I've created a lot of open source projects published on
+        <a
+          href="https://github.com/zekroTJA"
+          _target="blank"
+        >GitHub</a>, generally to dive deep into new technologies, frameworks or languages and to publish and document my
+        colelcted knowledge for everyone in the open source community. In these projects, I often work with Go, C#/.NET/ASP.NET,
+        NodeJS, Python or - as front end techniques - stuff like Angular, Vue (which was also used for this page by the way) or React.
+        <br />
+        <br />In general, I've collected some experience handling general DevOps and deployment tools like Docker/docker-compose,
+        CI/CI (TravisCI, GitLab Pipelines, Jenkins, GitHub Actions) and CMS like Git or SVN. I'm using a set of database services
+        for my private projects like MongoDB, MariaDB, PostgreSQL, Neo4J, Cassandra or Redis. Also, I am confident of setting up,
+        maintaining and configuring Linux servers (debian, apline, arch).
       </p>
       <h1 class="page-header mt-6">YOUTUBE</h1>
       <p class="text-center mt-4">
