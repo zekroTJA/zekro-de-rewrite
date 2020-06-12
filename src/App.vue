@@ -34,6 +34,16 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap');
 
+body::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  /* outline: 1px solid slategrey; */
+}
+
 html {
   scroll-behavior: smooth;
 }
