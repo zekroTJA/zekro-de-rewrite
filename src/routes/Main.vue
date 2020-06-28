@@ -26,7 +26,7 @@
         <br />
         <br />
         I am {{ calculateAge(new Date('1998-12-12')) }} years old and a passionate developer and coder since around 2013. Back then,
-        I've started creating small tools using .NET (C#) and Windowns Forms. Also I've created some Modifications for the Game
+        I've started creating small tools using .NET (C#) and Windows Forms. Also I've created some Modifications for the Game
         Minecraft and some Bots connecting to the Discord API dive deep into Java and general object oriented programming.
         <br />
         <br />Currently, I am an apprentice at a software security and communication company in germany. Primarily, I am currently working with C#, .NET and ASP.NET (Framework and Core),
