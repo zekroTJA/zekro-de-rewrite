@@ -67,6 +67,10 @@
         <p>
           © 2020 Ringo Hoffmann (zekro Development)
           <br />Covered by MIT License.
+          <br />
+          <br />The zekro Development logo and other assets are excluded from this license.
+          <br />You are
+          <strong>not allowed</strong> to use the zekro Development logo anywhere without explicit permission.
         </p>
       </div>
     </div>
