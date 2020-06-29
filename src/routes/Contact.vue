@@ -66,7 +66,7 @@
       <div class="mt-3">
         <p>
           © 2020 Ringo Hoffmann (zekro Development)
-          <br />Covered by MIT Licence.
+          <br />Covered by MIT License.
         </p>
       </div>
     </div>
