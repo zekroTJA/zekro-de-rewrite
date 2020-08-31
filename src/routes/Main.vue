@@ -26,24 +26,31 @@
         <br />
         <br />
         I am {{ calculateAge(new Date('1998-12-12')) }} years old and a passionate developer and coder since around 2013. Back then,
-        I've started creating small tools using .NET (C#) and Windows Forms. Also I've created some Modifications for the Game
-        Minecraft and some Bots connecting to the Discord API dive deep into Java and general object oriented programming.
+        I've started creating small tools using .NET (C#) and Windows Forms. Also, I've created some modifications for the Game
+        Minecraft and some Bots using the Discord API to dive deeper into Java and object oriented programming in general.
         <br />
-        <br />Currently, I am an apprentice at a software security and communication company in germany. Primarily, I am currently working with C#, .NET and ASP.NET (Framework and Core),
-        as well as with Angular.
+        <br />Currently, I am working as front and back end developer as well as DevOps administrator at a german software security
+        and communications company. Primarily, I am working with .NET (C#), ASP.NET Core and Angular. Additionally, I am responsible
+        for maintaining our GitLab instances and some of our CI/CD infrastructure.
         <br />
         <br />I've created a lot of open source projects published on
         <a
           href="https://github.com/zekroTJA"
           _target="blank"
-        >GitHub</a>, generally to dive deep into new technologies, frameworks or languages and to publish and document my
-        colelcted knowledge for everyone in the open source community. In these projects, I often work with Go, C#/.NET/ASP.NET,
-        NodeJS, Python or - as front end techniques - stuff like Angular, Vue (which was also used for this page by the way) or React.
+        >GitHub</a>, generally to dive deep into technologies, frameworks or languages and to publish and document my
+        colelcted knowledge for everyone in the open source community. In these projects, I often work with techniques like
+        Go, C#/.NET/ASP.NET, NodeJS, Elixir, Java, Python or - as front end techniques - stuff like Angular, Vue
+        <i>
+          (which was also
+          used for this page by the way)
+        </i>, React or Flutter.
         <br />
-        <br />In general, I've collected some experience handling general DevOps and deployment tools like Docker/docker-compose,
-        CI/CI (TravisCI, GitLab Pipelines, Jenkins, GitHub Actions) and CMS like Git or SVN. I'm using a set of database services
-        for my private projects like MongoDB, MariaDB, PostgreSQL, Neo4J, Cassandra or Redis. Also, I am confident of setting up,
-        maintaining and configuring Linux servers (debian, apline, arch).
+        <br />In general, I've collected some experience working with general DevOps and deployment tools like Docker/docker-compose,
+        CI/CD (TravisCI, GitLab Pipelines, Jenkins, GitHub Actions) and SCM like Git or SVN. I'm using a set of database services
+        for my private projects like MongoDB, MariaDB, PostgreSQL, Neo4J, Cassandra, Redis, Elasticsearch or MeiliSearch. Also, I
+        am confident of setting up, maintaining and configuring Linux servers (debian, apline, arch). Since around 2016, I am hosting
+        all my services on my VPS where I learned a lot about linux server administration, deployment with Docker and docker-compose,
+        edge routing with Apache2, Nginx or Traefik and control/monitoring using stuff like Portainer or netdata.
       </p>
       <h1 class="page-header mt-6">YOUTUBE</h1>
       <p class="text-center mt-4">
