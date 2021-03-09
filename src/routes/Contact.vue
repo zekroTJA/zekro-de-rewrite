@@ -43,7 +43,7 @@
       </table>
     </b-container>
     <div class="text-center" style="margin-top: 100px;">
-      <a class="imprint-btn" href="imprint.html">IMPRINT</a>
+      <a class="imprint-btn" href="imprint">IMPRINT</a>
     </div>
     <div class="built-with-banner text-center">
       <div class="hr"></div>
