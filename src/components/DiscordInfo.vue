@@ -2,16 +2,18 @@
   <a :href="href" class="dc-cont d-flex">
     <div class="d-flex mx-auto data-cont">
       <img class="avatar mr-4" :src="rdata.icon_url" width="100" height="100" />
-      <div>
-        <h2>{{ rdata.name }}</h2>
+      <div class="details">
+        <div class="heading">
+          <h2>{{ rdata.name }}</h2>
+        </div>
         <div class="d-flex">
           <div class="pill mr-3">
             <div class="pill-dot online"></div>
-            {{ rdata.members_online }} Online
+            {{ rdata.online_member_count }}<span class="descriptor">&nbsp;Online</span>
           </div>
           <div class="pill">
             <div class="pill-dot"></div>
-            {{ rdata.members_total }} Members
+            {{ rdata.total_member_count }}<span class="descriptor">&nbsp; Members</span>
           </div>
         </div>
       </div>
@@ -36,8 +38,8 @@ export default {
       rdata: {
         icon_url: '',
         name: '',
-        members_total: 0,
-        members_online: 0,
+        total_member_count: 0,
+        online_member_count: 0,
       },
     };
   },
@@ -45,7 +47,7 @@ export default {
   methods: {
     fetchData() {
       this.$http
-        .get(`https://api.zekro.de/guildinfo/guild/${this.guildid}`)
+        .get(`https://api.zekro.de/guildinfo/guilds/${this.guildid}`)
         .then((res) => {
           this.rdata = res.body;
           console.log(res.body);
@@ -62,6 +64,10 @@ export default {
 
 <style scoped>
 /** @format */
+
+h2 {
+  text-align: left;
+}
 
 .dc-cont {
   position: relative;
@@ -126,5 +132,11 @@ img.avatar {
   border-radius: 0px 0px 5px 5px;
 
   transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 750px) {
+  .descriptor {
+    display: none;
+  }
 }
 </style>

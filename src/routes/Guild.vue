@@ -50,10 +50,11 @@ export default {
 
 <style scoped>
   .discord {
+    width: 100%;
+    max-width: 800px;
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
-    width: 50vw;
   }
 
   .dc-frame {

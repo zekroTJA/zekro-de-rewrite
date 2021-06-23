@@ -1,6 +1,7 @@
 :root {
-    --c-bg-main:    #0f0f0f !important;
-    --c-bg-sec:     #181818 !important;
-    --c-bg-header:  #0f0f0fc9 !important;
-    --c-highlight:  #f20e4f !important;
+    --c-bg-main:        #0f0f0f !important;
+    --c-bg-sec:         #181818 !important;
+    --c-bg-header:      #0f0f0f !important;
+    --c-bg-header-o:    #0f0f0fc9 !important;
+    --c-highlight:      #f20e4f !important;
 }
