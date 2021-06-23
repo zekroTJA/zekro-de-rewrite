@@ -156,7 +156,7 @@ export default {
   top: 0px;
   z-index: 5;
   color: white !important;
-  background-color: var(--c-bg-header) !important;
+  background-color: var(--c-bg-header-o);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -195,7 +195,8 @@ export default {
 .burger-btn {
   width: 100%;
   margin: 0px;
-  padding: 10px;
+  padding: 10px 0px;
+  background-color: var(--c-bg-header-o);
 }
 
 .burger-buttons {
@@ -207,7 +208,7 @@ export default {
 }
 
 .burger-active {
-  top: 0px;
+  top: 12px;
   opacity: 1;
 }
 
@@ -218,7 +219,7 @@ export default {
   z-index: 4;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 850px) {
   .header {
     display: none !important;
   }
