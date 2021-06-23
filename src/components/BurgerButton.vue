@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import { RouterEventBus } from '../js/router-eventbus'
-
 export default {
   name: 'BurgerButton',
 
